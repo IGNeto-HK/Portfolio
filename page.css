@@ -1,0 +1,774 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Fira Sans', Arial, sans-serif;
+    font-family: "Share Tech Mono", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Fonte TEC */
+
+.share-tech-mono-regular {
+    font-family: "Share Tech Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+/* Geral */
+
+h1, h2, h3 {
+    margin: 0;
+    color: #222;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+    
+    
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Tela de Carregamento */
+.loading-screen {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Altura da tela */
+    background-color: #111111;  /* Cor de fundo */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    text-align: center; /* Garante que o conteúdo seja centralizado */
+}
+
+/* Conteúdo da tela de carregamento */
+.loading-content {
+    display: flex;
+    flex-direction: column; /* Garante que a imagem e o texto fiquem empilhados */
+    align-items: center; /* Centraliza a imagem e o texto */
+}
+
+
+/* Imagem SVG com efeito pulse */
+.svg-image {
+    width: 500px;
+    height: auto;
+   
+}
+
+/* Definição da animação pulse */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta o tamanho */
+    }
+    100% {
+        transform: scale(1); /* Volta ao tamanho original */
+    }
+}
+
+
+/* Estilo geral do texto */
+.glitch-text {
+    font-family:  "Share Tech Mono", serif;  /* Fonte TEC */
+    font-size: 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    display: inline-block;
+    border-right: 4px solid #fff; /* Simula o cursor */
+    padding-right: 5px;
+    overflow: hidden; /* Esconde o texto até ser digitado */
+    white-space: nowrap; /* Evita quebra de linha */
+    width: 0; /* Inicialmente não exibe nada */
+    animation: typing 5s steps(30, end) 0.5s forwards, blink 0.75s step-end infinite; /* Delay de 1s incluído */
+}
+
+/* Animação de digitação */
+@keyframes typing {
+    from {
+        width: 0; /* Começa sem texto visível */
+    }
+    to {
+        width: 100%; /* Exibe todo o texto */
+    }
+}
+
+/* Animação do cursor */
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #fff;
+    }
+}
+
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 768px) {
+    .glitch-text {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+        line-height: 1.4; /* Define o espaçamento entre linhas */
+        word-break: break-word; /* Quebra palavras longas */
+        overflow-wrap: break-word; /* Alternativa para quebra de palavras */
+        white-space: normal; /* Permite a quebra automática de linhas */
+        text-align: center; /* Centraliza o texto */
+        max-width: 100%; /* Garante que o texto ocupe no máximo a largura da tela */
+        box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+        padding: 0 10px; /* Adiciona um espaço interno para evitar cortes */
+        margin: 0 auto; /* Centraliza o texto */
+    }
+
+    /* Ajustar outros textos se necessário */
+    .hero-text h2 {
+        font-size: 20px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .menu li a {
+        font-size: 14px;
+    }
+}
+
+
+/* Animação de digitação */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Animação do cursor */
+@keyframes blink {
+    50% {
+        border-color: transparent; /* Pisca (some e reaparece) */
+    }
+}
+
+
+
+/* Conteúdo principal */
+.content {
+    display: none;        /* Inicialmente invisível */
+    opacity: 0;           /* Opacidade 0 */
+    transition: opacity 1s ease-in; /* Efeito fade-in */
+}
+
+/* Classe para mostrar o conteúdo com efeito fade-in */
+.content.show {
+    display: block;       /* Torna visível */
+    opacity: 1;           /* Torna totalmente visível */
+}
+
+
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #e63946, #111);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.header .container {
+    display: flex;
+    flex-direction: column; /* Alinha logo e menu verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+.header .logo img {
+    max-height: 80px; /* Ajuste o tamanho da logo */
+    width: auto;
+    margin-bottom: 10px; /* Espaço entre a logo e o menu */
+}
+
+.header nav {
+   
+    border-radius:0%; /* Bordas arredondadas */
+   
+    border-radius: 40%;
+   
+}
+
+.header .menu {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os botões */
+    margin: 0;
+    padding: 30px 30px; /* Espaçamento interno no menu */
+   
+}
+
+.header .menu li {
+    margin: 0;
+   
+}
+
+.header .menu a {
+    display: inline-block;
+    padding: 10px 20px;
+   
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 140%;
+    border-radius: 0px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header .menu a:hover {
+    
+    color: #948b8b;
+    border-radius:30%;
+}
+
+
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to right, #e63946, #111);
+    color: #fff;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #111111;
+    border-radius: 10%;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.hero-text .btn-primary {
+    position: relative;
+    top: 30px; /* Mantém o deslocamento vertical */
+    background-color: #e63946;
+    color: #fff;
+    padding: 15px 30px; /* Aumenta o espaço interno do botão */
+    font-size: 1.2rem; /* Aumenta o tamanho do texto */
+    text-decoration: none;
+    border-radius: 8px; /* Suaviza os cantos para acompanhar o novo tamanho */
+    transition: background-color 0.3s ease;
+}
+
+.hero-text .btn-primary:hover {
+    background-color: #d62828; /* Mantém a transição para hover */
+}
+
+
+/* Ajuste para dispositivos mobile */
+
+@media (max-width: 768px) { /* Ajusta o layout para telas pequenas */
+    .hero-content {
+        margin-bottom: 20px;
+      flex-direction: column; /* Empilha os elementos verticalmente */
+      align-items: center; /* Centraliza o conteúdo */
+    }
+  
+    .hero-image {
+      margin-bottom: 1rem; /* Espaço entre a imagem e o texto */
+      text-align: center; /* Centraliza a imagem no mobile */
+    }
+  
+    .hero-image img {
+      max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+      height: auto; /* Mantém a proporção da imagem */
+    }
+  
+    .new-hero-text {
+        max-width: 50%; /* Limita a largura do texto para evitar que ocupe o espaço inteiro */
+        padding-right: 20px; /* Ajusta o espaço entre o texto e a imagem */
+    }
+   
+  }
+
+
+
+/* New Hero section */
+
+.new-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza verticalmente os itens */
+    flex-wrap: wrap; /* Garante que a imagem e o texto quebrem corretamente em telas menores */
+}
+
+
+.new-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    gap: 40px; /* Adiciona um espaço entre a imagem e o texto */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    .new-hero-content {
+        flex-direction: column; /* Alinha as divs uma abaixo da outra */
+    }
+
+    .new-hero-text, .new-hero-image {
+        max-width: 100%; /* Ajusta a largura das divs para ocupar toda a tela */
+        margin-bottom: 20px; /* Adiciona espaçamento entre as divs */
+        text-align: center; /* Centraliza o texto */
+        
+    }
+}
+
+.new-hero-text, .new-hero-image {
+    flex: 1;
+    max-width: 600px;
+}
+
+.new-hero-text h2 {
+    font-size: 300%;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.new-hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+.new-hero-text .new-btn-primary {
+    background-color: #e63946;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.new-hero-text .new-btn-primary:hover {
+    background-color: #d62828;
+    font-size: 1.25rem;
+}
+
+.new-hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #111111;
+    border-radius: 10%;
+}
+
+
+
+
+/* About Section */
+.about {
+    padding: 40px 20px;
+    background-color: #111111;
+    color: white;
+    text-align: center; /* Centraliza todo o texto dentro da seção */
+}
+
+.about h2 {
+    margin-bottom: 20px;
+    color: #ffffff; /* Cor do título para destacar */
+    font-size: 2rem; /* Ajuste o tamanho da fonte conforme necessário */
+    font-weight: bold;
+    padding: 20px 0; /* Ajuste o padding para mais espaço acima e abaixo do título */
+}
+
+.about p {
+    max-width: 800px; /* Limita a largura do parágrafo para não esticar demais em telas grandes */
+    margin: 0 auto; /* Centraliza o parágrafo horizontalmente */
+    font-size: 1.1rem; /* Ajuste o tamanho da fonte para maior legibilidade */
+    line-height: 1.6; /* Melhora o espaçamento entre as linhas */
+}
+
+
+/* Services Section */
+.services {
+    padding: 150px 20px;
+    background-color: #111;
+}
+
+.services .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.services .card {
+    background-color:#86272E;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.services .card h3 {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.services .card p {
+    color: #ffffff;
+    font-size: 1.20rem;
+}
+
+.services h2 {
+    margin-bottom: 30px; /* Ajuste este valor para aumentar ou reduzir o espaçamento */
+    text-align: center; /* Opcional: centraliza o texto */
+    color: #ffffff;
+    font-size: 300%;
+}
+
+.new-service-image {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+    
+    background-color: #111;
+    color: #fff;
+    font-family: "Share Tech Mono", serif;
+    font-weight: 400;
+    
+    
+}
+
+.contact h2 {
+    color: #fff; /* Garante que o título "Contato" fique em branco */
+    font-size: 300%;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    
+}
+
+.contact ul li {
+    margin: 10px 0;
+}
+
+.contact .btn-secondary {
+    font-family: "Share Tech Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #fff;
+    color: #111;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.contact .btn-secondary:hover {
+    font-family: "Share Tech Mono", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #e63946;
+    color: #fff;
+}
+
+/* Certificados */
+/* Ajustes gerais */
+body, html {
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+}
+
+/* Certificados */
+/* Estilos da seção de formação */
+.formacao {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #e63946, #111);
+}
+
+/* Icones de cursos e tradução */
+.material-icons {
+    font-size: 100px; /* Tamanho do ícone */
+    color: #ffffff; /* Cor personalizada */
+    display: block; /* Garante que fique acima do texto */
+    text-align: center; /* Centraliza o ícone */
+    margin-bottom: 8px; /* Espaçamento entre o ícone e o texto */
+}
+
+
+
+.formacao-container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    color: white;
+}
+
+.formacao-container h2.subtitulo {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+/* Carrossel Mobile */
+
+@media (max-width: 768px) {
+    .certificados-lista {
+        flex-direction: column; /* Organiza os certificados em uma coluna */
+        overflow: hidden; /* Desabilita a rolagem */
+    }
+
+    .certificado {
+        flex: 0 0 100%; /* Faz com que cada certificado ocupe toda a largura da tela */
+        min-width: 100%;
+        margin-bottom: 30px; /* Aumenta o espaço entre os certificados */
+        padding: 20px; /* Ajusta o padding para dispositivos móveis */
+        text-align: left; /* Alinha o texto à esquerda */
+    }
+
+    .certificado h3 {
+        margin: 10px 0;
+        font-size: 1.2rem; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    }
+
+    .certificado-icone {
+        width: 40px; /* Reduz o tamanho da imagem */
+        height: 40px; /* Ajuste a altura proporcional */
+        object-fit: contain; /* Garante que a imagem se ajuste sem distorção */
+    }
+
+    .formacao-extra {
+        flex-direction: column; /* Organiza os itens da formação em uma coluna */
+        gap: 20px; /* Ajuste o espaçamento entre os itens */
+        align-items: stretch; /* Garante que todos os itens se estiquem igualmente */
+    }
+
+    /* Ajustando os textos para não sair da div */
+    .certificado .certificado-tipo {
+        font-size: 1rem; /* Ajusta o tamanho do título */
+    }
+
+    .certificado .certificado-descricao {
+        font-size: 1.20rem; /* Ajuste o tamanho da descrição */
+        word-wrap: break-word; /* Quebra as palavras longas para não sair da div */
+        overflow-wrap: break-word; /* Garante que o texto não ultrapasse os limites da div */
+        white-space: normal; /* Permite quebras de linha */
+    }
+
+    /* Desabilitar os botões de navegação do carrossel */
+    .carrossel-btn {
+        display: none; /* Oculta os botões */
+    }
+
+    /* Remove a rolagem horizontal no carrossel */
+    .carrossel {
+        overflow: hidden; /* Desabilita a rolagem */
+        padding: 0; /* Remove o padding extra */
+    }
+}
+
+
+
+
+
+
+
+/* Carrossel Desktop */
+.carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 60px; /* Adicionar espaço para os botões do lado de fora */
+}
+
+.certificados-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+.certificados-lista {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    align-items: stretch;  /* Faz os itens ocuparem a mesma altura */
+}
+
+.certificado {
+    flex: 0 0 33.3333%;
+    min-width: 33.3333%;
+    background-color: #111111;
+    color: white;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;  /* Distribui o conteúdo */
+    height: 300px;  /* Define uma altura fixa para os certificados */
+}
+
+.certificado h3 {
+    text-align: center;
+    margin: 10px 0;
+    color: #e63946; /* Cor do nome dos certificados */
+    margin-top: 15px;  /* Adiciona um espaçamento entre a imagem e o título */
+}
+
+
+.carrossel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    border: none;
+    color: #ffffff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 2;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carrossel-btn:hover {
+    background-color: rgba(230, 57, 70, 0.7); /* Fundo semitransparente ao passar o mouse */
+}
+
+.prev-btn {
+    left: 10px; /* Ajuste para posicionar o botão fora do carrossel */
+}
+
+.next-btn {
+    right: 10px; /* Ajuste para posicionar o botão fora do carrossel */
+}
+
+.carrossel-btn i {
+    pointer-events: none;
+}
+
+.formacao-extra {
+    margin-top: 10%;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    text-align: center; /* Garante que o texto seja centralizado dentro de cada div */
+    flex-wrap: wrap; /* Permite que as divs quebrem a linha em telas menores */
+}
+
+/* Ajuste dos icones dos certificados */
+
+.certificado-tipo {
+    margin-bottom: 10px;  /* Espaçamento entre o título "Certificado" e a imagem */
+}
+
+.certificado-icone {
+    display: block;
+    margin: 10px auto 20px;  /* Espaçamento entre o título e a imagem */
+    width: 70px;  /* Tamanho fixo da imagem */
+    height: 70px;  /* Definindo altura fixa para as imagens */
+    object-fit: contain;  /* Garante que a imagem se ajuste ao tamanho sem distorcer */
+}
+
+
+.cursos, .idiomas {
+    color: white;
+    text-align: center; /* Centraliza o texto dentro de cada div */
+    flex: 1 1 200px; /* Faz com que cada div ocupe uma largura mínima de 200px */
+    max-width: 400px; /* Limita a largura máxima */
+}
+
+.cursos ul, .idiomas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    word-break: break-word; /* Permite a quebra de palavras longas */
+}
+
+.cursos li, .idiomas li {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+}
+
+.cursos h3, .idiomas h3 {
+    margin-top: 20px; /* Ajusta a margem para ser mais compacta */
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+/* Footer */
+.footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
