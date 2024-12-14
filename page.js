@@ -10,6 +10,15 @@ if (menuToggle) {
     });
 }
 
+// Menu hamburger para dispositivos mobile
+
+function toggleMenu() {
+    const menu = document.querySelector('.header .menu');
+    menu.classList.toggle('active'); // Alterna a classe 'active' para mostrar ou esconder o menu
+}
+
+
+
 // Rolagem suave para links internos
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -48,13 +57,12 @@ document.addEventListener('DOMContentLoaded', function () {
     prevBtn.addEventListener('click', prevItem);
 });
 
-// Função para esconder a tela de carregamento após o carregamento da página
 window.addEventListener('load', () => {
     const loadingScreen = document.querySelector('.loading-screen');
     const content = document.querySelector('.content');
 
     // Definir o tempo de duração da tela de carregamento
-    const loadingDuration = 7000; // 3 segundos (ajuste conforme necessário)
+    const loadingDuration = 7000; // 5 segundos
 
     // Remover a tela de carregamento e mostrar o conteúdo principal após a duração
     setTimeout(() => {
@@ -62,6 +70,9 @@ window.addEventListener('load', () => {
         content.classList.add('show'); // Adiciona a classe para o fade-in do conteúdo
     }, loadingDuration);
 });
+
+
+
 
 
 
