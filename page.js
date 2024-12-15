@@ -62,7 +62,7 @@ window.addEventListener('load', () => {
     const content = document.querySelector('.content');
 
     // Definir o tempo de duração da tela de carregamento
-    const loadingDuration = 7000; // 5 segundos
+    const loadingDuration = 7000; // 7 segundos
 
     // Remover a tela de carregamento e mostrar o conteúdo principal após a duração
     setTimeout(() => {
