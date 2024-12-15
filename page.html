@@ -31,25 +31,34 @@
 
 <!-- Conteúdo principal com a classe "content" -->
 <div class="content">
+
     <header class="header fade-in">
         <div class="container">
             <div class="logo">
-                <img src="menu.png" alt="Logo do site">
+                <img src="logo.png" alt="Logo do site">
             </div>
-            <nav>
+            <nav class="main-nav">
                 <ul class="menu">
                     <li><a href="#about">Sobre</a></li>
                     <li><a href="#services">Serviços</a></li>
                     <li><a href="#contact">Contato</a></li>
                 </ul>
-                <div class="hamburger" onclick="toggleMenu()">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
             </nav>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/italo-neto-1b4313210/" class="linkedin-btn">
+                    <img src="linkedin.png" alt="Botão do LinkedIn" class="linkedin-icon">
+                    <span>LINKEDIN</span>
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
+    
+    
 
 
 
@@ -58,7 +67,7 @@
                 <div class="container">
                     <div class="hero-content slide-in">
                         <div class="hero-image">
-                            <img src="haha.png" alt="Banner" />
+                            <img src="haha.png" alt="Cavaleiro" />
                         </div>
                         <div class="hero-text">
                             <h2>RedTeam e Pentest</h2>
@@ -92,28 +101,29 @@
                 </div>
             </section>
 
-        <section id="services" class="services fade-in">
-            <div class="container">
-                <h2>Serviços</h2>
-                <div class="grid slide-in">
-                    <div class="card"> 
-                        <h3>Pentest <strong>WEB</strong></h3>
-                        <img src="web.png" alt="Pentest WEB" class="new-service-image">
-                        <p>Identificação de vulnerabilidades em aplicações web.</p>
-                    </div>
-                    <div class="card">  
-                        <h3>Pentest <strong>MOBILE</strong></h3>
-                        <img src="mobile.png" alt="Pentest MOBILE" class="new-service-image">
-                        <p>Avaliação da segurança de aplicativos móveis, identificando vulnerabilidades e riscos.</p>
-                    </div>
-                    <div class="card"> 
-                        <h3>Pentest em <strong>REDES</strong></h3>
-                        <img src="redes.png" alt="Pentest em REDES" class="new-service-image">
-                        <p>Testes de segurança em infraestruturas de rede, identificando falhas e pontos críticos.</p>
+            <section id="services" class="services fade-in">
+                <div class="container">
+                    <h2>Serviços</h2>
+                    <div class="grid slide-in">
+                        <div class="card"> 
+                            <h3>Pentest <strong>WEB</strong></h3>
+                            <img src="website.gif" alt="Pentest WEB" class="new-service-image web-image">
+                            <p>Identificação de vulnerabilidades em aplicações web.</p>
+                        </div>
+                        <div class="card">  
+                            <h3>Pentest <strong>MOBILE</strong></h3>
+                            <img src="android.gif" alt="Pentest MOBILE" class="new-service-image mobile-image">
+                            <p>Avaliação da segurança de aplicativos móveis, identificando vulnerabilidades e riscos.</p>
+                        </div>
+                        <div class="card"> 
+                            <h3>Pentest em <strong>REDES</strong></h3>
+                            <img src="redes.gif" alt="Pentest em REDES" class="new-service-image redes-image">
+                            <p>Testes de segurança em infraestruturas de rede, identificando falhas e pontos críticos.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+            
 
 
 
